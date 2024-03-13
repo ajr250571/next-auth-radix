@@ -1,15 +1,28 @@
-import { PersonIcon } from "@radix-ui/react-icons";
-import { Button } from "@radix-ui/themes";
+import SigninForm from "@/app/components/auth/SigninForm";
+import { Card, Container, Flex, Heading, Text, Link } from "@radix-ui/themes";
 import React from "react";
+import NavLink from "next/link";
 
 function LoginPage() {
   return (
-    <div>
-      LoginPage
-      <Button>
-        <PersonIcon width="16" height="16" /> Login
-      </Button>
-    </div>
+    <>
+      <Container size="1" height="100%" className="p-3 md:p-1">
+        <Flex className="h-screen w-full items-center">
+          <Card className="w-full p-7">
+            <Heading>Sign In</Heading>
+            <SigninForm />
+            <Flex justify="between" my="4">
+              <Text>Don`t have as account?</Text>
+              <Link asChild>
+                <NavLink href="/auth/register" passHref>
+                  Sign In
+                </NavLink>
+              </Link>
+            </Flex>
+          </Card>
+        </Flex>
+      </Container>
+    </>
   );
 }
 
