@@ -9,13 +9,13 @@ function LoginPage() {
       <Container size="1" height="100%" className="p-3 md:p-1">
         <Flex className="h-screen w-full items-center">
           <Card className="w-full p-7">
-            <Heading>Sign In</Heading>
+            <Heading my="4">Login</Heading>
             <SigninForm />
             <Flex justify="between" my="4">
               <Text>Don`t have as account?</Text>
               <Link asChild>
                 <NavLink href="/auth/register" passHref>
-                  Sign In
+                  Register
                 </NavLink>
               </Link>
             </Flex>
